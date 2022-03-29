@@ -1,14 +1,10 @@
-'strict'
-
 const info = function(){
 
-const calcAverage = () => (score1 + score2 +score3) / 3; 
-const avgTeam1 = (44, 23, 71);
-const avgTeam2 = (65, 54, 49);
-console.log(avgTeam1 + ' team1');
-console.log(avgTeam2 + ' team2');
+const calcAverage = (score1, score2, score3) => (score1 + score2 + score3) / 3; 
+const team1Scores = calcAverage(44, 530, 71);
+const team2Scores = calcAverage(65, 54, 49);
 
+const checkWinner = team1Scores > team2Scores ? `Team 1 wins with a score of ${team1Scores} vs ${team2Scores}` : `Team 2 wins with a score of ${team2Scores} vs ${team1Scores}.`;
+document.querySelector("h3").textContent = checkWinner;
 
-const checkWinner = avgTeam1 > avgTeam2 ? 'team 1 wins' : 'team 2 wins';
-console.log(checkWinner);
 }
